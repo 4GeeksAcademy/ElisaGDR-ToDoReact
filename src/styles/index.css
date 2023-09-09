@@ -1,12 +1,47 @@
+.main {
+    background-color: rgb(223, 218, 218);
+    height: 100%
+}
 
-/* 
+.container {
+    width: 400px;
+    background-color: white;
+    height: 100%;
+    border: grey 1px solid;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+h1 {
+    margin: auto;
+    padding: 20px;
+}
 
-*/
+input {
+    width: 320px;
+    text-align: left;
+    padding: 3px;
+    border: none;
+    font-style: italic;
+}
+
+ul li {
+    border-bottom: 1px solid grey;
+    list-style: none;
+    text-align: left;
+    padding: 0%;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.hidden-icon > .icon {
+    visibility: hidden;
+}
+/* Muestra el icono cuando el cursor pase por encima del li */
+.hidden-icon:hover > .icon {
+    visibility: visible;
+    color: red;
+}
