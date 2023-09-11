@@ -9,7 +9,7 @@ export const ToDo = () => {
     //3. Código JS
     //3.1 Definir Hooks
     const [inputValue, setInputValue] = useState('');
-    const [listTask, setListTask] = useState(["Patinar", "barrer"]);
+    const [listTask, setListTask] = useState([]);
 
     //3.2 Difinir funciones handle
 
@@ -42,7 +42,7 @@ export const ToDo = () => {
                     </li>
                     {listTask.map((task, index) => (
                         <li key={index} className="taskItem hidden-icon">{task}
-                        <FontAwesomeIcon icon={faX} className="icon" onClick={deleteTask(index)}/>
+                        <FontAwesomeIcon icon={faX} className="icon" onClick={() => deleteTask(index)}/>
                         </li>
                     ))}
                     <li>{listTask === 0 ? "You don't have tasks to do." : `${listTask.length} tasks left to do.`}</li>
